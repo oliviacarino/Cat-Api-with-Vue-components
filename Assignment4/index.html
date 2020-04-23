@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Assignment 4</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<!-- Chart.js and Vue-Chart.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<style>
+		.fixImg img,
+		h4 {
+			width: 400px;
+			height: auto;
+		}
+
+		h4 {
+			line-height: 1.5em;
+		}
+	</style>
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<div id="header">
+
+		<div class="top">
+
+			<!-- Logo -->
+			<!-- <div id="logo">
+				<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+				<h1 id="title">Jane Doe</h1>
+				<p>Hyperspace Engineer</p>
+			</div> -->
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<!-- <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li> -->
+					<li><a href="#bobcat" id="portfolio-link"><span class="icon solid fa-th">Bobtail</span></a>
+					</li>
+					<li><a href="#abyssinian" id="portfolio-link"><span class="icon solid fa-th">Abyssinian</span></a>
+					</li>
+					<li><a href="#devon" id="portfolio-link"><span class="icon solid fa-th">Devon Rex</span></a>
+					</li>
+					<li><a href="#shorthair" id="portfolio-link"><span class="icon solid fa-th">Shorthair</span></a>
+					</li>
+					<li><a href="#wirehair" id="portfolio-link"><span class="icon solid fa-th">Wirehair</span></a>
+					</li>
+					<li><a href="#graph" id="portfolio-link"><span class="icon solid fa-th">Graph</span></a>
+					</li>
+					<li><a href="#theworks" id="portfolio-link"><span class="icon solid fa-th">How this works</span></a>
+					</li>
+					<!-- <li><a href="#about" id="about-link"><span class="icon solid fa-user">Abyssinian</span></a></li> -->
+					<!-- <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Devon Rex</span></a> -->
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Social Icons -->
+		<!-- <div class="bottom">
+
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+
+		</div> -->
+
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Intro -->
+		<!-- <section id="top" class="one dark cover">
+			<div class="container">
+
+				<header>
+					<h2 class="alt">Let's learn about cats!</h2>
+
+				</header>
+
+				<footer>
+					<a href="#portfolio" class="button scrolly">Click to scroll</a>
+				</footer>
+
+			</div>
+		</section> -->
+
+		<div id="bobcat">
+			<!-- Bobcat -->
+			<section id="portfolio" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Bobtail</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<h2>****I'm still trying to figure out how to add chart.js**</h2>
+									<div id="bobcat">
+										<div>
+											<cats whichcat="abob"></cats>
+										</div>
+									</div>
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Abyssinian -->
+			<section id="abyssinian" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<!-- <div id="bobcat"> -->
+									<div>
+										<cats whichcat="abys"></cats>
+									</div>
+									<!-- </div> -->
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Devon Rex -->
+			<section id="devon" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<!-- <div id="bobcat"> -->
+									<div>
+										<cats whichcat="drex"></cats>
+									</div>
+									<!-- </div> -->
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Shorthair -->
+			<section id="shorthair" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<!-- <div id="bobcat"> -->
+									<div>
+										<cats whichcat="asho"></cats>
+									</div>
+									<!-- </div> -->
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Wirehair -->
+			<section id="wirehair" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<!-- <div id="bobcat"> -->
+									<div>
+										<cats whichcat="awir"></cats>
+									</div>
+									<!-- </div> -->
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Graph -->
+			<section id="graph" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<h2>Health Issues</h2>
+
+									<canvas id="myChart" width="400" height="400"></canvas>
+
+
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- The Works -->
+			<section id="theworks" class="two">
+				<div class="container">
+					<!-- <header>
+					<h2>Abyssinian</h2>
+				</header> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+								<header>
+									<!-- <div id="bobcat"> -->
+									<h2>How this works</h2>
+									<h4>I first began by transferring all of my data from the Vue instance, "bobcat"
+										into a new component, "cats."
+										Then I created the template of my component and added the necessary HTML
+										elements needed to create each div
+										per breed. I added a property called "whichcat" to the component so I can
+										dynamically change the breed ID
+										for each cat element. I also used class binding within the h4 that contains the
+										energy levels of each
+										breed – I have it set so that if energy_level > 2, the text will be red (or
+										green if it's < 2). The data within the component helps insert the new values
+											after loadNextImage() is called. </h4> <br>
+											<h4>Next, the function create() then calls loadNextImage() and uses whichcat
+												as a parameter to pass through. This
+												lets the component know that it's time to create the next div containing
+												a new breed.
+												Lastly, the methods section of the componenet declares loadNextImage().
+												Within this function, we use axios to
+												pull a JSON object from the cat API. We add "breedID" at the end of the
+												URL within the beginning of loadNextImage()
+												in order to load each object of a corresponding breed (i.e., whichcat =
+												"abob" loads the bobcat object,
+												whichcat = "abys" loads the Abyssinian object, and so on). After the
+												data is pulled via axios, we then redefine
+												the empty array, allofit, to response.data and call it. Next, we use
+												catchto throw an error if something goes
+												wrong when collecting the new data.
+											</h4><br>
+											<h4>Now we create the slideshow() function. This first uses a conditional if
+												statement to output the first
+												element of the response.data array. Then we call this.image =
+												this.allofit[this.i] to cycle through and output
+												each image element gathered from the array.
+											</h4>
+											<!-- </div> -->
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="catshow.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

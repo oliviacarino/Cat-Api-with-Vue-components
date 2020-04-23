@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1,
+        h2,
+        h4,
+        img,
+        button,
+        p {
+            width: 500px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cats!</h1>
+
+    <div id="bobcat">
+
+        <div>
+            <cats whichcat="abob"></cats>
+        </div>
+
+        <div>
+            <cats whichcat="abys"></cats>
+        </div>
+
+        <div>
+            <cats whichcat="drex"></cats>
+        </div>
+
+        <div>
+            <cats whichcat="asho"></cats>
+        </div>
+
+        <div>
+            <cats whichcat="awir"></cats>
+        </div>
+
+    </div>
+
+    <h1>How this works:</h1>
+    <p>I first began by transferring all of my data from the Vue instance, "bobcat" into a new component, "cats."
+       Then I created the template of my component and added the necessary HTML elements needed to create each div
+       per breed. I added a property called "whichcat" to the component so I can dynamically change the breed ID
+       for each cat element. I also used class binding within the h4 that contains the energy levels of each 
+       breed – I have it set so that if energy_level > 2, the text will be red (or green if it's < 2).
+       The data within the component helps insert the new values after loadNextImage() 
+       is called.
+    </p>
+    <p>Next, the function create() then calls loadNextImage() and uses whichcat as a parameter to pass through. This 
+        lets the component know that it's time to create the next div containing a new breed.
+       Lastly, the methods section of the componenet declares loadNextImage(). Within this function, we use axios to
+       pull a JSON object from the cat API. We add "breedID" at the end of the URL within the beginning of loadNextImage()
+       in order to load each object of a corresponding breed (i.e., whichcat = "abob" loads the bobcat object, 
+       whichcat = "abys" loads the Abyssinian object, and so on). After the data is pulled via axios, we then redefine
+       the empty array, allofit, to response.data and call it. Next, we use catchto throw an error if something goes
+       wrong when collecting the new data. 
+    </p>
+    <p>Now we create the slideshow() function. This first uses a conditional if statement to output the first
+        element of the response.data array. Then we call this.image = this.allofit[this.i] to cycle through and output
+        each image element gathered from the array. 
+    </p>
+
+</body>
+<script src="catshow.js"></script>
+
+</html>
